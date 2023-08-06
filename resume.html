@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your CV</title>
+    <!-- Link to the resume.css file -->
+    <link rel="stylesheet" href="resume.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <!-- Your photo -->
+            <div class="photo">
+                <img src="your-photo.jpg" alt="Your Photo">
+            </div>
+            <div class="header-text">
+                <h1>Your Name</h1>
+                <p>Job Title</p>
+            </div>
+        </div>
+
+        <!-- Links on the left -->
+        <div class="links">
+            <ul>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <h2 id="about-me">About Me</h2>
+            <p>
+                Highly skilled and dedicated Technical Specialist with six years of experience in the IT industry, specializing in AWS (Amazon Web Services). Adept at designing, implementing, and managing cloud-based solutions, I am committed to delivering top-notch technical expertise and providing innovative solutions to complex challenges. Seeking a challenging role where I can leverage my AWS expertise and leadership abilities to contribute to the success of a dynamic organization.
+
+
+            </p>
+            
+            <h2 id="education">Education</h2>
+            <p><strong>Syrian Virtual University SVU
+            </strong>
+            , 2022</p>
+            <p>with expertise in computer science, programming languages, data management, and network administration. My hands-on experience in emerging technologies, coupled with strong problem-solving skills and teamwork abilities, makes me well-prepared to excel in IT roles. Ethical responsibility and legal awareness add to my value as an asset to any organization.
+                .</p>
+            
+            <h2 id="experience">Experience</h2>
+            <p><strong>Job Title: IT technical Support </strong>, Gamerpower7, 2017-2023</p>
+            <p>-Implemented efficient system maintenance strategies, resulting in a significant decrease in system downtime and enhanced overall performance.
+                -Received commendations for providing exceptional user support and training, leading to increased productivity and seamless technology integration within the organization.
+                -Recognized for resolving over 200 online chats in 8 hours, showcasing a remarkable ability to troubleshoot and deliver effective solutions promptly to clients.
+                -Played a key role in reducing the average response time for technical tickets from 48 hours to just 12 hours, leading to heightened customer satisfaction and improved service levels.
+                -Successfully resolved complex technical issues across the Windows environment, earning praise for expertise in remote and on-site troubleshooting for clients and staff.
+                -Led investigation efforts into product-related issues, identifying root causes and implementing effective solutions, contributing to a smoother user experience.
+                -Proactively monitored and analyzed the performance of games and websites, optimizing systems and content to achieve higher engagement and user satisfaction.
+                
+                </p>
+        </div>
+    </div>
+
+    <!-- JavaScript code for smooth scrolling -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const links = document.querySelectorAll('a[href^="#"]');
+
+            links.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(link.getAttribute('href'));
+                    const headerOffset = 100;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition - headerOffset;
+
+                    window.scrollBy({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
